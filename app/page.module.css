@@ -1,0 +1,857 @@
+.container {
+  min-height: 100vh;
+  background-color: #fafafa;
+}
+
+/* Navigation */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  z-index: 1000;
+}
+
+.navContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  text-decoration: none;
+}
+
+.logoChinese {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  letter-spacing: -0.01em;
+  display: block;
+}
+
+.logoEnglish {
+  font-size: 0.75rem;
+  color: #666666;
+  font-family: 'Noto Sans TC', sans-serif;
+  margin-top: 0.25rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  display: block;
+}
+
+.navLinks {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  transition: opacity 0.2s ease;
+}
+
+.navLinks a:hover {
+  opacity: 0.6;
+}
+
+/* Hero - Magazine Style */
+.hero {
+  padding: 10rem 2rem 6rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.heroContent {
+  padding: 0;
+}
+
+.heroMeta {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.8125rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.heroCategory {
+  color: #2d5a87;
+  font-weight: 500;
+}
+
+.heroDate {
+  color: #8a8a8a;
+}
+
+.heroTitle {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 2.75rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #1a1a1a;
+  margin-bottom: 2rem;
+  letter-spacing: -0.02em;
+}
+
+.heroSummary {
+  font-size: 1.0625rem;
+  line-height: 1.8;
+  color: #4a4a4a;
+  margin-bottom: 2.5rem;
+  font-weight: 300;
+}
+
+.heroActions {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.heroImage {
+  padding: 0;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  background-color: #e8e8e8;
+}
+
+.buttonPrimary {
+  display: inline-block;
+  padding: 0.875rem 2rem;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  transition: opacity 0.2s ease;
+  border: 1px solid #1a1a1a;
+}
+
+.buttonPrimary:hover {
+  opacity: 0.8;
+}
+
+.buttonSecondary {
+  display: inline-block;
+  padding: 0.875rem 2rem;
+  background-color: transparent;
+  color: #1a1a1a;
+  text-decoration: none;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  transition: opacity 0.2s ease;
+  border: 1px solid #1a1a1a;
+}
+
+.buttonSecondary:hover {
+  opacity: 0.6;
+}
+
+/* Sections */
+.sectionContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.sectionTitle {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 3rem;
+  letter-spacing: -0.01em;
+}
+
+/* Spotlight */
+.spotlight {
+  padding: 6rem 0;
+  background-color: #ffffff;
+}
+
+.spotlightGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.spotlightCard {
+  padding: 0;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 2rem;
+}
+
+.spotlightTitle {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 1.375rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+}
+
+.spotlightDesc {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: #4a4a4a;
+  margin-bottom: 1rem;
+  font-weight: 300;
+}
+
+.spotlightLink {
+  color: #2d5a87;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-size: 0.9375rem;
+  transition: opacity 0.2s ease;
+}
+
+.spotlightLink:hover {
+  opacity: 0.7;
+}
+
+/* Services */
+.services {
+  padding: 6rem 0;
+  background-color: #fafafa;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+}
+
+.serviceCategory {
+  padding: 0;
+}
+
+.categoryTitle {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.01em;
+}
+
+.serviceList {
+  list-style: none;
+  padding: 0;
+}
+
+.serviceList li {
+  font-size: 0.9375rem;
+  line-height: 1.8;
+  color: #4a4a4a;
+  margin-bottom: 0.75rem;
+  font-weight: 300;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.serviceList li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: #8a8a8a;
+}
+
+/* Lawyer Section */
+.lawyer {
+  padding: 6rem 0;
+  background-color: #ffffff;
+}
+
+.lawyerContent {
+  max-width: 700px;
+}
+
+.lawyerInfo {
+  padding: 0;
+}
+
+.lawyerName {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
+}
+
+.lawyerTitle {
+  font-size: 0.9375rem;
+  color: #666666;
+  margin-bottom: 2.5rem;
+  font-weight: 300;
+}
+
+.lawyerDetails {
+  padding: 0;
+}
+
+.detailSection {
+  margin-bottom: 2.5rem;
+}
+
+.detailTitle {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.detailSection p {
+  font-size: 0.9375rem;
+  line-height: 1.8;
+  color: #4a4a4a;
+  margin-bottom: 0.5rem;
+  font-weight: 300;
+}
+
+/* Contact Strip */
+.contactStrip {
+  padding: 4rem 0;
+  background-color: #fafafa;
+  border-top: 1px solid #e0e0e0;
+}
+
+.contactStripGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2rem;
+}
+
+.contactItem {
+  padding: 0;
+}
+
+.contactItem strong {
+  display: block;
+  font-size: 0.8125rem;
+  color: #666666;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.contactItem p {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: #1a1a1a;
+  font-weight: 300;
+}
+
+.contactItem a {
+  color: #2d5a87;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s ease;
+}
+
+.contactItem a:hover {
+  opacity: 0.7;
+}
+
+/* Footer */
+.footer {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 4rem 0 2rem;
+}
+
+.footerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.footerMain {
+  margin-bottom: 3rem;
+}
+
+.footerFirm {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+}
+
+.footerAddress {
+  font-size: 0.9375rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 300;
+}
+
+.footerLegal {
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footerLink {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-size: 0.875rem;
+  transition: opacity 0.2s ease;
+}
+
+.footerLink:hover {
+  opacity: 0.6;
+}
+
+.footerSeparator {
+  color: rgba(255, 255, 255, 0.3);
+  margin: 0 1rem;
+}
+
+.footerDisclaimer {
+  font-size: 0.8125rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 1.5rem;
+  font-weight: 300;
+}
+
+/* Page Styles */
+.pageSection {
+  padding: 6rem 0;
+  background-color: #fafafa;
+}
+
+.pageTitle {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 3rem;
+  letter-spacing: -0.01em;
+}
+
+.pageContent {
+  max-width: 700px;
+}
+
+.pageContent p {
+  font-size: 1rem;
+  line-height: 1.9;
+  color: #4a4a4a;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+}
+
+/* Service Detail Page */
+.serviceDetailSection {
+  margin-bottom: 5rem;
+}
+
+.serviceDetailTitle {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+  letter-spacing: -0.01em;
+}
+
+.serviceDetailIntro {
+  font-size: 1.0625rem;
+  line-height: 1.8;
+  color: #4a4a4a;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+.serviceDetailContent {
+  max-width: 700px;
+}
+
+.serviceDetailSubtitle {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.serviceDetailList {
+  list-style: none;
+  padding: 0;
+}
+
+.serviceDetailList li {
+  font-size: 0.9375rem;
+  line-height: 1.8;
+  color: #4a4a4a;
+  margin-bottom: 0.75rem;
+  font-weight: 300;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.serviceDetailList li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: #8a8a8a;
+}
+
+.serviceCTA {
+  margin-top: 5rem;
+  padding-top: 3rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.serviceCTAText {
+  font-size: 1.0625rem;
+  color: #4a4a4a;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+}
+
+.serviceCTALinks {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Lawyer Page */
+.lawyerPageContent {
+  max-width: 700px;
+}
+
+.lawyerPageInfo {
+  margin-bottom: 3rem;
+}
+
+.lawyerPageName {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
+}
+
+.lawyerPageTitle {
+  font-size: 0.9375rem;
+  color: #666666;
+  font-weight: 300;
+}
+
+.lawyerPageSection {
+  margin-bottom: 3rem;
+}
+
+.lawyerPageSectionTitle {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.lawyerPageSection p {
+  font-size: 0.9375rem;
+  line-height: 1.8;
+  color: #4a4a4a;
+  margin-bottom: 0.75rem;
+  font-weight: 300;
+}
+
+.lawyerPageSection strong {
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+/* Articles List */
+.articlesList {
+  max-width: 800px;
+}
+
+.articleListItem {
+  padding: 2rem 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.articleListMeta {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.8125rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.articleListCategory {
+  color: #2d5a87;
+  font-weight: 500;
+}
+
+.articleListDate {
+  color: #8a8a8a;
+}
+
+.articleListTitle {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+}
+
+.articleListExcerpt {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: #4a4a4a;
+  font-weight: 300;
+}
+
+/* Contact Page */
+.contactPageGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-top: 2rem;
+}
+
+.contactPageInfo {
+  padding: 0;
+}
+
+.contactPageItem {
+  margin-bottom: 2rem;
+}
+
+.contactPageItem strong {
+  display: block;
+  font-size: 0.8125rem;
+  color: #666666;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.contactPageItem p {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: #1a1a1a;
+  font-weight: 300;
+}
+
+.lineLink {
+  color: #2d5a87;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s ease;
+}
+
+.lineLink:hover {
+  opacity: 0.7;
+}
+
+.contactPageMap {
+  margin-top: 3rem;
+}
+
+.mapPlaceholder {
+  width: 100%;
+  height: 300px;
+  background-color: #e8e8e8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8a8a8a;
+  font-size: 0.9375rem;
+}
+
+.contactPageForm {
+  padding: 0;
+}
+
+.contactFormFull {
+  padding: 0;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+  display: block;
+  font-size: 0.875rem;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.checkboxLabel input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+}
+
+.checkboxLabel span {
+  font-size: 0.9375rem;
+  color: #4a4a4a;
+  font-weight: 300;
+}
+
+.formGroup input,
+.formGroup textarea,
+.formGroup select {
+  width: 100%;
+  padding: 0.875rem;
+  border: 1px solid #d1d1d1;
+  background-color: #ffffff;
+  font-size: 0.9375rem;
+  font-family: inherit;
+  color: #1a1a1a;
+  transition: border-color 0.2s ease;
+  font-weight: 300;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus,
+.formGroup select:focus {
+  outline: none;
+  border-color: #1a1a1a;
+}
+
+.formGroup textarea {
+  resize: vertical;
+}
+
+.formDisclaimer {
+  margin-top: 1.5rem;
+  font-size: 0.8125rem;
+  line-height: 1.7;
+  color: #666666;
+  font-weight: 300;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .heroGrid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .spotlightGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contactStripGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .contactPageGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .navContent {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .navLinks {
+    gap: 1.5rem;
+    font-size: 0.875rem;
+  }
+
+  .hero {
+    padding: 8rem 1.5rem 4rem;
+  }
+
+  .heroTitle {
+    font-size: 2.25rem;
+  }
+
+  .sectionContent {
+    padding: 0 1.5rem;
+  }
+
+  .spotlight,
+  .services,
+  .lawyer,
+  .contactStrip,
+  .pageSection {
+    padding: 4rem 0;
+  }
+
+  .sectionTitle,
+  .pageTitle {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .spotlightGrid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .servicesGrid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .contactStripGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+
+  .heroActions {
+    flex-direction: column;
+  }
+
+  .buttonPrimary,
+  .buttonSecondary {
+    width: 100%;
+    text-align: center;
+  }
+}
