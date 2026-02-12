@@ -27,12 +27,12 @@ export default function Home() {
               <span className={styles.heroDate}>24小時內回覆</span>
             </div>
             <h1 className={styles.heroTitle}>
-              I'll Make Them Pay.<br/>
+              I&apos;ll Make Them Pay.<br/>
               Whoever Is Responsible,<br/>
-              I'll Make Sure They Fucking Pay.
+              I&apos;ll Make Sure They Fucking Pay.
             </h1>
             <p className={styles.heroSummary}>
-              Even if you did it, doesn't mean you are guilty.
+              Even if you did it, doesn&apos;t mean you are guilty.
             </p>
             <div className={styles.heroActions}>
               <a href="#contact" className={styles.buttonPrimary}>立即諮詢</a>
