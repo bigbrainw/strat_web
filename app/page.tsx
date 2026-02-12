@@ -1,10 +1,61 @@
+'use client'
+
+import { useState, useEffect, useRef } from 'react'
 import styles from './page.module.css'
 import Link from 'next/link'
 
 export default function Home() {
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [transitionDuration, setTransitionDuration] = useState(0.15)
+  const lastScrollY = useRef(0)
+  const lastScrollTime = useRef(Date.now())
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY || window.pageYOffset || document.documentElement.scrollTop
+      const currentTime = Date.now()
+      const timeDelta = currentTime - lastScrollTime.current
+      const scrollDelta = Math.abs(currentScrollY - lastScrollY.current)
+      
+      // Calculate scroll speed (pixels per millisecond)
+      const speed = timeDelta > 0 ? scrollDelta / timeDelta : 0
+      
+      // Map scroll speed to transition duration
+      // Faster scroll = faster transition (lower duration)
+      // Slower scroll = slower transition (higher duration)
+      // Speed range: 0-10 pixels/ms, duration range: 0.05s - 0.2s
+      const minDuration = 0.05
+      const maxDuration = 0.2
+      const maxSpeed = 10 // pixels per millisecond
+      const normalizedSpeed = Math.min(speed, maxSpeed) / maxSpeed
+      const dynamicDuration = maxDuration - (normalizedSpeed * (maxDuration - minDuration))
+      
+      setTransitionDuration(dynamicDuration)
+      setIsScrolled(currentScrollY > 50)
+      
+      lastScrollY.current = currentScrollY
+      lastScrollTime.current = currentTime
+    }
+
+    // Check initial scroll position
+    handleScroll()
+
+    // Add scroll listener
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
   return (
     <div className={styles.container}>
-      <nav className={styles.nav}>
+      <nav 
+        className={`${styles.nav} ${isScrolled ? styles.navScrolled : ''}`}
+        style={{ 
+          '--transition-duration': `${transitionDuration}s`
+        } as React.CSSProperties}
+      >
         <div className={styles.navContent}>
           <Link href="/" className={styles.logo}>
             <span className={styles.logoChinese}>韜略法律事務所</span>
@@ -12,12 +63,31 @@ export default function Home() {
           </Link>
           <ul className={styles.navLinks}>
             <li><a href="#about">關於本所</a></li>
+            <li><a href="#victories">勝訴案例</a></li>
+            <li><a href="#innocence">無罪推定</a></li>
             <li><a href="#services">服務項目</a></li>
             <li><a href="#lawyer">律師介紹</a></li>
             <li><a href="#contact">聯絡我們</a></li>
           </ul>
         </div>
       </nav>
+
+      <div 
+        className={`${styles.scrollingBanner} ${isScrolled ? styles.scrollingBannerScrolled : ''}`}
+        style={{ 
+          '--transition-duration': `${transitionDuration}s`
+        } as React.CSSProperties}
+      >
+        <div className={styles.scrollingBannerContent}>
+          <div className={styles.scrollingBannerText}>
+            <span>If you take drugs, just go fuck yourself. We don&apos;t take your cases.</span>
+            <span>If you take drugs, just go fuck yourself. We don&apos;t take your cases.</span>
+            <span>If you take drugs, just go fuck yourself. We don&apos;t take your cases.</span>
+            <span>If you take drugs, just go fuck yourself. We don&apos;t take your cases.</span>
+            <span>If you take drugs, just go fuck yourself. We don&apos;t take your cases.</span>
+          </div>
+        </div>
+      </div>
 
       <section id="home" className={styles.hero}>
         <div className={styles.heroGrid}>
@@ -45,6 +115,105 @@ export default function Home() {
         </div>
       </section>
 
+      <section id="victories" className={styles.victories}>
+        <div className={styles.sectionContent}>
+          <h2 className={styles.sectionTitle}>I&apos;ve Made Them Pay</h2>
+          <div className={styles.victoriesGrid}>
+            <div className={styles.victoryCard}>
+              <div className={styles.victoryAmount}>$2.5M</div>
+              <h3 className={styles.victoryTitle}>Contract Breach Settlement</h3>
+              <p className={styles.victoryDesc}>
+                Client was wrongfully terminated from a major contract. We didn&apos;t just negotiate—we made them pay every cent they owed, plus damages.
+              </p>
+            </div>
+            <div className={styles.victoryCard}>
+              <div className={styles.victoryAmount}>$1.8M</div>
+              <h3 className={styles.victoryTitle}>Employment Discrimination</h3>
+              <p className={styles.victoryDesc}>
+                They thought they could get away with it. They were wrong. Full compensation plus punitive damages.
+              </p>
+            </div>
+            <div className={styles.victoryCard}>
+              <div className={styles.victoryAmount}>$950K</div>
+              <h3 className={styles.victoryTitle}>Real Estate Fraud</h3>
+              <p className={styles.victoryDesc}>
+                Seller tried to hide defects. We exposed everything and made them pay for every repair, every inconvenience, every lie.
+              </p>
+            </div>
+            <div className={styles.victoryCard}>
+              <div className={styles.victoryAmount}>$3.2M</div>
+              <h3 className={styles.victoryTitle}>Corporate Litigation</h3>
+              <p className={styles.victoryDesc}>
+                Big corporation thought they could bully a small business. We turned the tables and made them pay triple damages.
+              </p>
+            </div>
+            <div className={styles.victoryCard}>
+              <div className={styles.victoryAmount}>$1.5M</div>
+              <h3 className={styles.victoryTitle}>Intellectual Property</h3>
+              <p className={styles.victoryDesc}>
+                They stole our client&apos;s work. We didn&apos;t just stop them—we made them pay for every dollar they made off it.
+              </p>
+            </div>
+            <div className={styles.victoryCard}>
+              <div className={styles.victoryAmount}>$2.1M</div>
+              <h3 className={styles.victoryTitle}>Personal Injury</h3>
+              <p className={styles.victoryDesc}>
+                Insurance company tried to lowball. We fought back and secured full compensation for medical bills, lost wages, and pain.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="innocence" className={styles.innocence}>
+        <div className={styles.sectionContent}>
+          <h2 className={styles.sectionTitle}>Did They Do It? We Don&apos;t Know. But They Are Not Guilty.</h2>
+          <div className={styles.innocenceCases}>
+            <div className={styles.innocenceCard}>
+              <h3 className={styles.innocenceCaseTitle}>Criminal Defense - Not Guilty</h3>
+              <p className={styles.innocenceCaseDesc}>
+                Client was accused of fraud. Prosecution couldn&apos;t prove intent beyond reasonable doubt. 
+                We exposed the gaps in their evidence. Verdict: Not guilty.
+              </p>
+            </div>
+            <div className={styles.innocenceCard}>
+              <h3 className={styles.innocenceCaseTitle}>Assault Charges - Dismissed</h3>
+              <p className={styles.innocenceCaseDesc}>
+                They said our client attacked them. We proved self-defense. The evidence showed they started it. 
+                Charges dismissed.
+              </p>
+            </div>
+            <div className={styles.innocenceCard}>
+              <h3 className={styles.innocenceCaseTitle}>White Collar Crime - Acquitted</h3>
+              <p className={styles.innocenceCaseDesc}>
+                Complex financial case. Prosecution had circumstantial evidence, but no smoking gun. 
+                We showed reasonable doubt. Jury acquitted.
+              </p>
+            </div>
+            <div className={styles.innocenceCard}>
+              <h3 className={styles.innocenceCaseTitle}>Drug Charges - Not Guilty</h3>
+              <p className={styles.innocenceCaseDesc}>
+                Client was in the wrong place at the wrong time. We proved they had no knowledge, no control, 
+                no intent. Not guilty on all counts.
+              </p>
+            </div>
+            <div className={styles.innocenceCard}>
+              <h3 className={styles.innocenceCaseTitle}>Theft Case - Charges Dropped</h3>
+              <p className={styles.innocenceCaseDesc}>
+                They claimed our client stole. We showed the evidence was tainted, the witness unreliable. 
+                Prosecution dropped charges before trial.
+              </p>
+            </div>
+            <div className={styles.innocenceCard}>
+              <h3 className={styles.innocenceCaseTitle}>DUI Defense - Reduced to Reckless</h3>
+              <p className={styles.innocenceCaseDesc}>
+                Breathalyzer was faulty. Procedure wasn&apos;t followed. We challenged every piece of evidence. 
+                Reduced from DUI to reckless driving.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section id="services" className={styles.services}>
         <div className={styles.sectionContent}>
