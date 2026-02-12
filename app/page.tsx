@@ -80,11 +80,11 @@ export default function Home() {
       >
         <div className={styles.scrollingBannerContent}>
           <div className={styles.scrollingBannerText}>
-            <span>If you take drugs, just go fuck yourself. We don&apos;t take your cases.</span>
-            <span>If you take drugs, just go fuck yourself. We don&apos;t take your cases.</span>
-            <span>If you take drugs, just go fuck yourself. We don&apos;t take your cases.</span>
-            <span>If you take drugs, just go fuck yourself. We don&apos;t take your cases.</span>
-            <span>If you take drugs, just go fuck yourself. We don&apos;t take your cases.</span>
+            <span>If you take drugs, just go fxxk yourself. We don&apos;t take your cases.</span>
+            <span>If you take drugs, just go fxxk yourself. We don&apos;t take your cases.</span>
+            <span>If you take drugs, just go fxxk yourself. We don&apos;t take your cases.</span>
+            <span>If you take drugs, just go fxxk yourself. We don&apos;t take your cases.</span>
+            <span>If you take drugs, just go fxxk yourself. We don&apos;t take your cases.</span>
           </div>
         </div>
       </div>
@@ -99,7 +99,7 @@ export default function Home() {
             <h1 className={styles.heroTitle}>
               I&apos;ll Make Them Pay.<br/>
               Whoever Is Responsible,<br/>
-              I&apos;ll Make Sure They Fucking Pay.
+              I&apos;ll Make Sure They Fxxking Pay.
             </h1>
             <p className={styles.heroSummary}>
               Even if you did it, doesn&apos;t mean you are guilty.
