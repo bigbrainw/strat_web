@@ -53,7 +53,6 @@ export default function InsightsPage() {
             <li><Link href="/#about">關於本所</Link></li>
             <li><Link href="/#services">服務項目</Link></li>
             <li><Link href="/#lawyer">律師介紹</Link></li>
-            <li><Link href="/#insights">實務觀點</Link></li>
             <li><Link href="/#contact">聯絡我們</Link></li>
           </ul>
         </div>

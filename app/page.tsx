@@ -14,7 +14,6 @@ export default function Home() {
             <li><a href="#about">關於本所</a></li>
             <li><a href="#services">服務項目</a></li>
             <li><a href="#lawyer">律師介紹</a></li>
-            <li><a href="#insights">實務觀點</a></li>
             <li><a href="#contact">聯絡我們</a></li>
           </ul>
         </div>
@@ -24,19 +23,20 @@ export default function Home() {
         <div className={styles.heroGrid}>
           <div className={styles.heroContent}>
             <div className={styles.heroMeta}>
-              <span className={styles.heroCategory}>法律觀點</span>
-              <span className={styles.heroDate}>2026年2月</span>
+              <span className={styles.heroCategory}>專業法律服務</span>
+              <span className={styles.heroDate}>24小時內回覆</span>
             </div>
             <h1 className={styles.heroTitle}>
-              合約與爭議處理：理解風險與選項，讓決策可執行
+              I'll Make Them Pay.<br/>
+              Whoever Is Responsible,<br/>
+              I'll Make Sure They Fucking Pay.
             </h1>
             <p className={styles.heroSummary}>
-              許多商業糾紛來自於當事人不清楚自己的風險與選項。我們協助你理解法律風險、
-              評估各種策略的可行性，用證據與策略把不確定性降到最低。
+              Even if you did it, doesn't mean you are guilty.
             </p>
             <div className={styles.heroActions}>
-              <a href="#contact" className={styles.buttonPrimary}>聯絡我們</a>
-              <a href="#services" className={styles.buttonSecondary}>查看服務</a>
+              <a href="#contact" className={styles.buttonPrimary}>立即諮詢</a>
+              <a href="#services" className={styles.buttonSecondary}>服務項目</a>
             </div>
           </div>
           <div className={styles.heroImage}>
@@ -45,34 +45,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="insights" className={styles.spotlight}>
-        <div className={styles.sectionContent}>
-          <h2 className={styles.sectionTitle}>常見情境</h2>
-          <div className={styles.spotlightGrid}>
-            <div className={styles.spotlightCard}>
-              <h3 className={styles.spotlightTitle}>租賃與買賣糾紛</h3>
-              <p className={styles.spotlightDesc}>
-                協助理解你的權利與風險，評估協商、調解、訴訟等策略選項。
-              </p>
-              <a href="#contact" className={styles.spotlightLink}>了解詳情</a>
-            </div>
-            <div className={styles.spotlightCard}>
-              <h3 className={styles.spotlightTitle}>勞資爭議處理</h3>
-              <p className={styles.spotlightDesc}>
-                釐清法律風險與選項，用策略與證據降低不確定性，讓決策可執行。
-              </p>
-              <a href="#contact" className={styles.spotlightLink}>了解詳情</a>
-            </div>
-            <div className={styles.spotlightCard}>
-              <h3 className={styles.spotlightTitle}>公司合約審閱</h3>
-              <p className={styles.spotlightDesc}>
-                在簽約前理解風險與選項，確保合約條款清楚、可執行、可預期。
-              </p>
-              <a href="#contact" className={styles.spotlightLink}>了解詳情</a>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <section id="services" className={styles.services}>
         <div className={styles.sectionContent}>
