@@ -49,7 +49,21 @@ export default function Home() {
           <p><a href="mailto:lawyerchen4928@gmail.com">lawyerchen4928@gmail.com</a></p>
           <p>臺北市中正區寧陽路 3 號 2 樓</p>
           <p>平日 09:00–18:00</p>
-          <p><a href="https://line.me/R/ti/p/0932008942" className={styles.lineLink}>加 LINE 好友</a></p>
+          <div className={styles.lineAdd}>
+            <a href="https://line.me/R/ti/p/0932008942" className={styles.lineLink} target="_blank" rel="noopener noreferrer">
+              加 LINE 好友
+            </a>
+            <span className={styles.lineAddHint}>或</span>
+            <div className={styles.lineQr}>
+              <img
+                src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https%3A%2F%2Fline.me%2FR%2Fti%2Fp%2F0932008942"
+                alt="LINE 加好友 QR Code"
+                width={120}
+                height={120}
+              />
+              <span className={styles.lineQrHint}>用手機 LINE 掃描</span>
+            </div>
+          </div>
         </div>
       </main>
 

@@ -72,8 +72,39 @@
   text-decoration: underline;
 }
 
+.lineAdd {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+}
+
 .lineLink {
   display: inline-block;
+}
+
+.lineAddHint {
+  color: #9ca3af;
+  font-size: 0.875rem;
+}
+
+.lineQr {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+}
+
+.lineQr img {
+  display: block;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+}
+
+.lineQrHint {
+  font-size: 0.75rem;
+  color: #9ca3af;
 }
 
 .lineFloat {
