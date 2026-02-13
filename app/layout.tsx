@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: '韜略法律事務所 | Strategy Law Firm',
-  description: '韜略法律事務所。讓當事人理解風險與選項，用策略與證據降低不確定性，讓流程與費用可預期、可溝通。',
+  title: '韜略法律事務所',
+  description: '韜略法律事務所。專業法律服務，24 小時內回覆。',
 }
 
 export default function RootLayout({
@@ -12,7 +12,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="zh-TW">
       <body>{children}</body>
     </html>
   )
