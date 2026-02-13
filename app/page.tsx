@@ -1,5 +1,6 @@
 import styles from './page.module.css'
 import Link from 'next/link'
+import Script from 'next/script'
 
 export default function Home() {
   return (
@@ -50,31 +51,22 @@ export default function Home() {
           <p>臺北市中正區寧陽路 3 號 2 樓</p>
           <p>平日 09:00–18:00</p>
           <div className={styles.lineAdd}>
-            <a href="https://line.me/R/ti/p/0932008942" className={styles.lineLink} target="_blank" rel="noopener noreferrer">
-              加 LINE 好友
-            </a>
-            <span className={styles.lineAddHint}>或</span>
-            <div className={styles.lineQr}>
-              <img
-                src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https%3A%2F%2Fline.me%2FR%2Fti%2Fp%2F0932008942"
-                alt="LINE 加好友 QR Code"
-                width={120}
-                height={120}
-              />
-              <span className={styles.lineQrHint}>用手機 LINE 掃描</span>
-            </div>
+            <div
+              className="line-it-button"
+              data-lang="zh_Hant"
+              data-type="friend"
+              data-env="PROD"
+              data-count="true"
+              data-home="true"
+              data-lineId="@0932008942"
+            />
+            <Script
+              src="https://www.line-website.com/social-plugins/js/thirdparty/loader.min.js"
+              strategy="afterInteractive"
+            />
           </div>
         </div>
       </main>
-
-      <a
-        href="https://line.me/R/ti/p/0932008942"
-        className={styles.lineFloat}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        LINE 我
-      </a>
 
       <footer className={styles.footer}>
         <p>韜略法律事務所</p>
