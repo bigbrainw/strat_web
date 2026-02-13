@@ -49,12 +49,12 @@ export default function Home() {
           <p><a href="mailto:lawyerchen4928@gmail.com">lawyerchen4928@gmail.com</a></p>
           <p>臺北市中正區寧陽路 3 號 2 樓</p>
           <p>平日 09:00–18:00</p>
-          <p><a href="line://ti/p/0932008942" className={styles.lineLink}>加 LINE 好友</a></p>
+          <p><a href="https://line.me/R/ti/p/0932008942" className={styles.lineLink}>加 LINE 好友</a></p>
         </div>
       </main>
 
       <a
-        href="line://ti/p/0932008942"
+        href="https://line.me/R/ti/p/0932008942"
         className={styles.lineFloat}
         target="_blank"
         rel="noopener noreferrer"
